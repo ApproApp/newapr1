@@ -185,24 +185,25 @@
 										</div>
 									</div>
 								</form>
-								<form id="register-form" action="#" method="post" role="form" style="display: none;">
+								<form id="register-form" action="" method="post" role="form" style="display: none;">
+                                    {% csrf_token %}
 									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+										{{ form.username }}
 									</div>
 									<div class="form-group">
-										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+										{{ form.email }}
 									</div>
 									<div class="form-group">
-										<input type="text" name="organisation-id" id="organisation-id" tabindex="2" class="form-control" placeholder="organisation Id">
+										{{ form.oid }}
 									</div>
 									<div class="form-group">
-										<input type="text" name="role-in" id="role-in" tabindex="2" class="form-control" placeholder="Role in organisation">
+										{{ form.rio }}
 									</div>
 									<div class="form-group">
-										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+										{{ form.password1 }}
 									</div>
 									<div class="form-group">
-										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+										{{ form.password2 }}
 									</div>
 									<div class="form-group">
 										<div class="row">
