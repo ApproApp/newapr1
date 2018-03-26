@@ -18,4 +18,15 @@ def create_profile(sender,**kwargs):
 
 post_save.connect(create_profile, sender=User)
 
+<<<<<<< HEAD
+=======
+# Create your models here.
+class Users(models.Model):
+	userId = models.CharField(max_length = 100 , default = '' , blank = False)
+	pwd = models.CharField(max_length = 10 ,blank = False)
+	email = models.CharField(max_length = 200 , blank=False)
+	org = models.CharField(max_length = 200,blank = False)
+	role = models.CharField(max_length = 50 , blank = False)
+	reg_date = models.DateTimeField('date registered')
+>>>>>>> 635a9962e677b79a910a5c8fa0a95a736160a0d9
 
