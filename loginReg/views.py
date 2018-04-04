@@ -7,12 +7,13 @@ def index(request):
 	if request.method == 'POST':
 		form = RegistrationForm(request.POST)
 		if form.is_valid():
-			form.save(commit=True)
-			'''username = form.cleaned_data.get('username')
-			raw_password = form.cleaned_data.get('password1')
-			user = authenticate(username=username, password=raw_password)
-			login(request, user)'''
+			form.save()
 			return HttpResponse("<h1>Thanks for registering</h1>")
+		username = form.cleaned_data.get('username')
+		raw_password = form.cleaned_data.get('password1')
+		user = authenticate(username=username, password=raw_password)
+		login(request, user)
+		return HttpResponse("<h1>Welcome<h1>")
 	else:
 		form = RegistrationForm()
 		return render(request, 'loginReg/index.html', {'form': form})

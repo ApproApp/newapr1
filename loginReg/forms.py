@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm
 
 rio_choices = [
     ('','Select your Role in Organization'),
@@ -29,3 +30,12 @@ class RegistrationForm(UserCreationForm):
         ]
 
 
+class Login(AuthenticationForm):
+    username = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Username', 'tabindex': 1}), required="True")
+    password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Password', 'tabindex': 2}))
+    class Meta:
+        model = User
+        fields = [
+            'username',
+            'password1',
+        ]
