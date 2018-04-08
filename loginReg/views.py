@@ -1,4 +1,4 @@
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import authenticate
 from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import RegistrationForm
@@ -17,7 +17,6 @@ def index(request):
 		raw_password = form.cleaned_data.get('password1')
 		#authenticate the user
 		user = authenticate(username=username, password=raw_password)
-		login(request, user)
 		return HttpResponse("<h1>Welcome<h1>")
 	else:
 		#if data is not getting posted and rather is being requested then present the registration form
