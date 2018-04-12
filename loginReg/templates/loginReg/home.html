@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<div class="jumbotron">
+
+    {% if user.is_authenticated and request.User.rio == "admin" %}
+    <h1>Welcome Admin</h1>
+    {% elif user.is_authenticated and request.User.rio == "executive" %}
+    <h1>Welcome Executive</h1>
+    {% else %}
+    <h1>Welcome Applicant</h1>
+    {% endif %}
+
+
+
+</div>
+</body>
+</html>

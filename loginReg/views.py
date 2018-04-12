@@ -2,6 +2,8 @@ from django.contrib.auth import authenticate
 from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import RegistrationForm
+from .decorators import *
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 def index(request):
 	#if the data is posted from the form
@@ -22,3 +24,17 @@ def index(request):
 		#if data is not getting posted and rather is being requested then present the registration form
 		form = RegistrationForm()
 		return render(request, 'loginReg/index.html', {'form': form})
+@login_required
+@is_Admin
+def admin(request):
+	return render(request,'loginReg/home.html')
+
+@login_required
+@is_Executive
+def executive(request):
+	return render(request,'loginReg/home.html')
+
+@login_required
+@is_Applicant
+def applicant(request):
+	return render(request,'loginReg/home.html')
