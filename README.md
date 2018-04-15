@@ -1,3 +1,3 @@
-**~.~ JAI MAHAKAAL ~.~**
-# newapr1
+# **~.~_JAI MAHAKAAL_~.~**
+## newapr1
 This is new repo created for better usage of django 2.0
