@@ -3,7 +3,7 @@ from django.core.exceptions import PermissionDenied
 
 def is_Executive(function):
     def wrap(request, *args, **kwargs):
-        if request.User.rio == "Executive":
+        if request.User.rio == "executive":
             return function(request, *args, **kwargs)
         else:
             raise PermissionDenied
@@ -13,7 +13,7 @@ def is_Executive(function):
 
 def is_Admin(function):
     def wrap(request, *args, **kwargs):
-        if request.User.rio == "Admin":
+        if request.User.rio == "admin":
             return function(request, *args, **kwargs)
         else:
             raise PermissionDenied
@@ -23,7 +23,7 @@ def is_Admin(function):
 
 def is_Applicant(function):
     def wrap(request, *args, **kwargs):
-        if request.User.rio == "Student":
+        if request.User.rio == "student":
             return function(request, *args, **kwargs)
         else:
             raise PermissionDenied
