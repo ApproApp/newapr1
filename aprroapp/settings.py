@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'loginReg.User'
 
 # Application definition
 
@@ -42,8 +43,6 @@ INSTALLED_APPS = [
     #local App
     'loginReg',
 
-    #3rd party App
-    'crispy_forms'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
