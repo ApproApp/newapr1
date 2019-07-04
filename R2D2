@@ -1,0 +1,6 @@
+Suggest possible matches for a search as users are typing.
+The Autocomplete pattern is a predictive, recognition based mechanism used to assist users when searching. An autocomplete search field presents items which match the users input as they type. As the user types in more text into the search field, the list of matching items is narrowed down.
+The list of matching items must allow users to select items using input devices such as keyboard arrow navigation, touch and mouse click. This allows the user to quickly select the term without having to type out the entire term. The patterns name comes from the notion that the system completes your search. Limit the number of matching items to display when working with large dataset. A standard limit is 10 matching items.
+Find a maximum number of matching items to display when the matching data set is in the hundreds, thousands, or millions. A standard limit seems to be to present a maximum 10 matching items.
+Order matching items by relevance with the most relevant or likely match at the top of the list. This will allow the user to quickly select his or her match.
+Some autocomplete implementations group matching items into categories. On apple.com for instance, matches are organized by groups.
