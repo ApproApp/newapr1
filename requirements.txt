@@ -11,7 +11,7 @@ pyparsing==2.1.10
 pytest==3.0.6
 python-dateutil==2.6.0
 pytz==2018.3
-pywin32==220
+pywin32==301
 requests==2.12.5
 simplejson==3.10.0
 six==1.10.0
